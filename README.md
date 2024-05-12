@@ -1,17 +1,13 @@
 # 概要
 
 ## アジェンダ
-- オープンデータとは
-- APIでオープンデータ活用例
-- スクレーピングでのデータ活用例
-- まとめ
+- [1_オープンデータについて](./Document/1_オープンデータについて.md)
+- [2_pythoによるデータ処理](./Document/2_pythoによるデータ処理.ipynb)
+- [3_eStatについて](./Document/3_eStatについて.md)
+- [4_人口と日本地図](./Document/4_人口と日本地図.ipynb)
+- [5_活用事例の紹介](./Document/5_活用事例の紹介.md)
+- [6_さいごに](./Document/6_さいごに.md)
+- [7_参考](./Document/7_参考.md)
 
-## 参考
-- [政府統計の総合窓口](https://www.e-stat.go.jp/)
-- [NDBオープンデータ](https://www.mhlw.go.jp/ndb/opendatasite/)
-- [オープンデータカタログ](https://data.e-gov.go.jp/info/ja)
-- [日本銀行時系列統計データ](https://www.stat-search.boj.or.jp/)
-- [東京都オープンデータ](https://portal.data.metro.tokyo.lg.jp/)
-- [自治体オープンデータ](https://www.open-governmentdata.org/)
-
-https://spec.api.metro.tokyo.lg.jp/spec/t132098d0000000103-80b9034ec2419cfeec601232cb3ff280-0
+## ボーナス・コード
+- [運動習慣のデータ調査](./Document/B_運動習慣のデータ調査.ipynb)
