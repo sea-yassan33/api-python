@@ -2,7 +2,7 @@
 
 ## アジェンダ
 - [1_オープンデータについて](./Document/1_オープンデータについて.md)
-- [2_pythoによるデータ処理](./Document/2_pythoによるデータ処理.ipynb)
+- [2_pythoによるデータ処理](./Document/2_pythonによるデータ処理.ipynb)
 - [3_eStatについて](./Document/3_eStatについて.md)
 - [4_人口と日本地図](./Document/4_人口と日本地図.ipynb)
 - [5_活用事例の紹介](./Document/5_活用事例の紹介.md)
