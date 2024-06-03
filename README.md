@@ -10,4 +10,6 @@
 - [7_参考](./Document/7_参考.md)
 
 ## ボーナス・コード
+- [Flaskを使用してブラウザに出力](./flask/B_flask_pandas.py)
 - [運動習慣のデータ調査](./Document/B_運動習慣のデータ調査.ipynb)
+ 

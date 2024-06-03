@@ -4,19 +4,19 @@ import io
 import base64
 import pandas as pd
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
-from matplotlib.figure import Figure
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 import japanize_matplotlib
 
 # Matplotlibのバックエンドを非GUIバックエンドに設定
-import matplotlib
 matplotlib.use('Agg')
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    text_str = 'Flaskを使用して作成した図をブラウザに出力'
     data = [
         {"年度": "2014年", "金額(円)": 8006},
         {"年度": "2015年", "金額(円)": 8708},
@@ -51,7 +51,7 @@ def index():
     canvas.print_png(s)
     # バッファの内容をBase64にエンコード、データをUTF-8形式の文字列に変換
     s = "data:image/png;base64," + base64.b64encode(s.getvalue()).decode("utf-8").replace("\n", "")
-    return render_template("index.html",plot=s)
+    return render_template("index.html",text = text_str,plot=s)
 
 # アプリケーションを実行
 if __name__ == '__main__':
