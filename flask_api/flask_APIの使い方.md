@@ -1,8 +1,8 @@
 ## インストール
-'''
+```
 pip install Flask
 pip install flask-cors
-'''
+```
 
 ## フォルダーの作成
 - pythonファイルを作成
