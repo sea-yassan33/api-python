@@ -12,5 +12,6 @@
 ## ボーナス・コード
 - [Flaskを使用してブラウザに出力](./flask/B_flask_pandas.py)
 - [FlaskのAPIでデータを取得しブラウザに出力](./flask_api/B_flask_api.py)
+- [FlaskのAPIとReactでブラウザに出力](./flask_api_react/js/app.js)
 - [運動習慣のデータ調査](./Document/B_運動習慣のデータ調査.ipynb)
  
