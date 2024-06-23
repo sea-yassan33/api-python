@@ -20,7 +20,7 @@ function App() {
     useEffect(() => {
         if (selectedMenu === 'Api'){
             // エンドポイントからデータ取得
-            fetch('http://localhost:5000/api/data/')
+            fetch('http://localhost:5000/api/ice_data/')
             .then(response => response.json())
             .then(data => setData(data));
         }
