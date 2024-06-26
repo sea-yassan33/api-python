@@ -64,9 +64,11 @@ function App() {
                     <canvas ref={chartRef} width="600" height="400"></canvas>
                 </div>
             );
-            case 'About':
+            case 'Map':
                 return (
-                <div>About Content</div>
+                <dib>
+                    <div>Data JapanMap</div>
+                </dib>
             );
             case 'Contact':
                 return (
@@ -85,7 +87,7 @@ function App() {
             <div className="w-1/4 bg-green-200 text-white p-4">
                 <ul className= {styles.columnFlex}>
                     <button className={`${styles.bottunBase} ${styles.bottunColorGreen}`} onClick={() => setSelectedMenu('Api')}>アイスクリーム年間消費</button>
-                    <button className={`${styles.bottunBase} ${styles.bottunColorGray} w-2/3`} onClick={() => setSelectedMenu('About')}>About</button>
+                    <button className={`${styles.bottunBase} ${styles.bottunColorGray} w-2/3`}><a href="./japanMapPage.html">日本人口統計</a></button>
                     <button className={`${styles.bottunBase} ${styles.bottunColorGray} w-1/2`} onClick={() => setSelectedMenu('Contact')}>Contact</button>
                 </ul>
             </div>
