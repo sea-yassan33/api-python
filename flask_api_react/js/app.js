@@ -60,15 +60,9 @@ function App() {
             case 'Api':
                 return (
                 <div>
-                    <h1>Data Visualization</h1>
+                    <h1>Data Annual expenditure on ice cream</h1>
                     <canvas ref={chartRef} width="600" height="400"></canvas>
                 </div>
-            );
-            case 'Map':
-                return (
-                <dib>
-                    <div>Data JapanMap</div>
-                </dib>
             );
             case 'Contact':
                 return (
