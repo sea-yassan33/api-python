@@ -77,9 +77,9 @@ function App() {
     // コンポーネントのレンダリング
     return (
         <div>
-            <div className="navbar navbar-expand navbar-dark bg-dark">
+            <div className="navbar navbar-expand navbar-dark custom-bg">
                 <div className="container-fluid">
-                    <p className="navbar-brand">Data</p>
+                    <p className="navbar-brand text-black">Data</p>
                     <div className="navbar-collapse">
                         <ul className="navbar-nav">
                             <button className={`${styles.sMadeBtn} `} onClick={() => setSelectedMenu('Api')}>アイスクリーム年間消費</button>

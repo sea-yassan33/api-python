@@ -28,3 +28,7 @@ a{
     overflow: hidden;
     margin:20px;
 }
+
+.custom-bg{
+    background: linear-gradient(to right, #fefeb2, #d8f70e);
+}
