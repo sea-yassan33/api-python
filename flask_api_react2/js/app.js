@@ -5,7 +5,7 @@ function App() {
     const styles = {
         sMadeBtn: 'btn btn-custom flex-fill',
         prSkipContent: 'sr-only sr-only-focusable',
-        prNaveBar: 'navbar  fixed-top flex-md-nowrap p-0 shadow custom-bg',
+        prNaveBar: 'navbar fixed-top flex-md-nowrap p-0 shadow custom-bg',
         prNaveBarContent: 'navbar-brand col-sm-3 col-md-2 mr-0',
         prNaveBarContent02: 'col d-flex align-items-center justify-content-center',
         prMainDisplay: 'px-4 min-vh-100',
@@ -96,7 +96,6 @@ function App() {
             <a id="skippy" className={`${styles.prSkipContent} `} href="#content">
                 <div className="container">
                     <span className="skiplink-text">Skip to main content</span>
-                    
                 </div>
             </a>
             <nav className={`${styles.prNaveBar} `}>

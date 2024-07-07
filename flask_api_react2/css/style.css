@@ -2,7 +2,6 @@ a{
     text-decoration: none;
     color:inherit
 }
-
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -14,13 +13,11 @@ a{
     background: linear-gradient(to right, #B2FEFA, #0ED2F7);
     color: black;
 }
-
 .content {
     flex: 1;
     width: 100%;
     padding: 1rem;
 }
-
 .canvas-container {
     position: relative;
     width:  calc(100% - 40px);
@@ -28,7 +25,6 @@ a{
     overflow: hidden;
     margin:20px;
 }
-
 .custom-bg{
     background: linear-gradient(to right, #fefeb2, #d8f70e);
 }
