@@ -11,19 +11,39 @@
     <title>Japan Map Page</title>
 </head>
 <body>
-    <div class="navbar navbar-expand navbar-dark custom-bg">
-        <div class="container-fluid">
-            <div class="navbar-collapse">
-                <ul class="navbar-nav">
-                    <a href="./index.html" class="btn btn-custom">React Pageに戻る</a>
-                </ul>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+    <nav class="navbar  fixed-top flex-md-nowrap p-0 shadow custom-bg">
+        <div class='row'>
+            <div class="col d-flex align-items-center justify-content-center">
+                <p class="navbar-brand col-sm-3 col-md-2 mr-0" >Open Data</p>
+            </div>
+            <div class="col d-flex align-items-center justify-content-center">
+                <a href="./index.html" class="btn btn-custom">React Pageに戻る</a>
             </div>
         </div>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <div class="nav-link">Not React Page</div>
+            </li>
+        </ul>
+    </nav>
+    <div className="mt-5">
+        <div class="px-4 min-vh-100 mt-5">
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                </div>
+            </div>
+            <h2 class="h2">Data Japan Demographic</h2>
+            <div id="my-map"></div>
+        </div>
     </div>
-    <div class="col-10 content">
-        <h2>Data Japan Demographic</h2>
-        <div id="my-map"></div>
-    </div>
+    
 <!-- jsの読み込み -->
 <script type="text/javascript" src="./js/jmap.js"></script>
 </body>
