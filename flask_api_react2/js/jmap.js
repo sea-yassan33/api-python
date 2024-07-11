@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var nameCell = document.createElement('td');
                 var populationCell = document.createElement('td');
                 var colorCell = document.createElement('td');
-                // タグ内のテキスト挿入
+                // タグ内にテキスト挿入
                 nameCell.textContent = area.name;
                 populationCell.textContent = area.number.toLocaleString();
                 colorCell.textContent = area.color;
