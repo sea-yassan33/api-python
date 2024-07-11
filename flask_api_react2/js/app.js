@@ -3,11 +3,7 @@ const { useState, useEffect, useRef } = React;
 function App() {
     // スタイルオブジェクトの定義
     const styles = {
-        sMadeBtn: 'btn btn-custom flex-fill',
-        prSkipContent: 'sr-only sr-only-focusable',
-        prNaveBar: 'navbar fixed-top flex-md-nowrap p-0 shadow custom-bg',
-        prNaveBarContent: 'navbar-brand col-sm-3 col-md-2 mr-0',
-        prNaveBarContent02: 'col d-flex align-items-center justify-content-center',
+        sMadeBtn: 'btn btn-outline-secondary btn-custom flex-fill',
         prMainDisplay: 'px-4 min-vh-100',
         prMainOption: 'd-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom',
         prBtn01:'btn btn-sm btn-outline-secondary',
@@ -58,6 +54,29 @@ function App() {
         }
     }, [data]);
 
+    // アイスクリーム年間消費量のデータをテーブル形式で表示
+    const iceTable = () => {
+        return(
+            <table className="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>年度</th>
+                        <th>金額(円)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((item,index)=> (
+                        <tr key={index}>
+                            <td>{item.年度}</td>
+                            <td>{item['金額(円)'].toLocaleString()}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        );
+    };
+
+    // メニューボタンを押された際にmain画面に表示する内容を切り替える
     const renderContent = () => {
         switch (selectedMenu) {
             case 'Api':
@@ -68,6 +87,9 @@ function App() {
                     </div>
                     <div class="canvas-container">
                         <canvas ref={chartRef} ></canvas>
+                    </div>
+                    <div className="mt-2">
+                        {iceTable()}
                     </div>
                 </div>
             );
@@ -93,33 +115,22 @@ function App() {
     // コンポーネントのレンダリング
     return (
         <div>
-            <a id="skippy" className={`${styles.prSkipContent} `} href="#content">
-                <div className="container">
-                    <span className="skiplink-text">Skip to main content</span>
+            <nav className="navbar navbar-expand custom-bg">
+                <div className="container-fluid">
+                    <p className="navbar-brand">Open Data</p>
+                    <div className="navbar-collapse">
+                        <ul className="navbar-nav">
+                            <li className="nav-item"><button className={`${styles.sMadeBtn}`} onClick={() => setSelectedMenu('Api')}>アイスクリーム年間消費</button></li>
+                            <li className="nav-item"><a className={`${styles.sMadeBtn}`} href="./japanMapPage.html">日本人口統計</a></li>
+                            <li className="nav-item"><button className={`${styles.sMadeBtn}`} onClick={() => setSelectedMenu('Contact')}>Preparation</button></li>
+                        </ul>
+                    </div>
+                    <ul className="navbar-nav ms-auto">
+                        <li className="nav-item"><p>React Page</p></li>
+                    </ul>
                 </div>
-            </a>
-            <nav className={`${styles.prNaveBar} `}>
-                <div className='row'>
-                    <div className={`${styles.prNaveBarContent02}`}>
-                        <p className={`${styles.prNaveBarContent}`} >Open Data</p>
-                    </div>
-                    <div className={`${styles.prNaveBarContent02}`}>
-                        <button className={`${styles.sMadeBtn}`} onClick={() => setSelectedMenu('Api')}>アイスクリーム年間消費</button>
-                    </div>
-                    <div className={`${styles.prNaveBarContent02}`}>
-                        <a className={`${styles.sMadeBtn}`} href="./japanMapPage.html">日本人口統計</a>
-                    </div>
-                    <div className={`${styles.prNaveBarContent02}`}>
-                        <button className={`${styles.sMadeBtn}`} onClick={() => setSelectedMenu('Contact')}>Preparation</button>
-                    </div>
-                </div>
-                <ul className="navbar-nav px-3">
-                    <li className="nav-item text-nowrap">
-                        <div className="nav-link">React Page</div>
-                    </li>
-                </ul>
             </nav>
-            <div className="mt-5">
+            <main className="mt-2">
                 <div className={`${styles.prMainDisplay}`}>
                     <div className="btn-toolbar mb-2 mb-md-0">
                         <div className="btn-group mr-2">
@@ -129,7 +140,7 @@ function App() {
 					</div>
                     {renderContent()}
                 </div>
-            </div>
+            </main>
         </div>
     );
 }

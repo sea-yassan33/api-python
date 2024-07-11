@@ -24,6 +24,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert(data.area.name +"の人口：" + data.area.number.toLocaleString() +"人");
                 }
             });
+            // テーブルにデータを表示
+            var tableBody = document.getElementById('data-table-body');
+            data.forEach(function(area) {
+                // タグの作成
+                var row = document.createElement('tr');
+                var nameCell = document.createElement('td');
+                var populationCell = document.createElement('td');
+                var colorCell = document.createElement('td');
+                // タグ内のテキスト挿入
+                nameCell.textContent = area.name;
+                populationCell.textContent = area.number.toLocaleString();
+                colorCell.textContent = area.color;
+                // テーブルタグ内に作成したタグを挿入
+                row.appendChild(nameCell);
+                row.appendChild(populationCell);
+                row.appendChild(colorCell);
+                tableBody.appendChild(row);
+            });
         })
         .catch(error => console.error('Error fetching data:', error));
 });

@@ -11,39 +11,43 @@
     <title>Japan Map Page</title>
 </head>
 <body>
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-        <div class="container">
-            <span class="skiplink-text">Skip to main content</span>
-        </div>
-    </a>
-    <nav class="navbar  fixed-top flex-md-nowrap p-0 shadow custom-bg">
-        <div class='row'>
-            <div class="col d-flex align-items-center justify-content-center">
-                <p class="navbar-brand col-sm-3 col-md-2 mr-0" >Open Data</p>
-            </div>
-            <div class="col d-flex align-items-center justify-content-center">
-                <a href="./index.html" class="btn btn-custom">React Pageに戻る</a>
+    <nav class="navbar navbar-expand custom-bg custom-bg">
+        <div class='container-fluid'>
+            <p class="navbar-brand">Open Data</p>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <a href="./index.html" class="btn btn-outline-secondary btn-custom">React Pageに戻る</a>
+                </ul>
             </div>
         </div>
-        <ul class="navbar-nav px-3">
-            <li class="nav-item text-nowrap">
-                <div class="nav-link">Not React Page</div>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <p>Not React Page</p>
             </li>
         </ul>
     </nav>
-    <div className="mt-5">
-        <div class="px-4 min-vh-100 mt-5">
-            <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-group mr-2">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                </div>
+    <div class="px-4 min-vh-100 mt-2">
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group mr-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
             </div>
-            <h2 class="h2">Data Japan Demographic</h2>
-            <div id="my-map"></div>
         </div>
+        <h2 class="h2">Data Japan Demographic</h2>
+        <div id="my-map"></div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">都道府県名</th>
+                    <th scope="col">人口</th>
+                    <th scope="col">色コード(ヒートマップ用)</th>
+                </tr>
+            </thead>
+            <!-- データを挿入 -->
+            <tbody id="data-table-body">
+            </tbody>
+        </table>
     </div>
-    
 <!-- jsの読み込み -->
 <script type="text/javascript" src="./js/jmap.js"></script>
 </body>
